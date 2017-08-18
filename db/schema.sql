@@ -1,13 +1,12 @@
-CREATE DATABASE IF NOT EXISTS burgers_db;
-USE burgers_db;
+DROP DATABASE IF EXISTS `georisk`;
+CREATE DATABASE `georisk`;
 
-# If the table already exists, remove it before trying to create the table again
-DROP TABLE IF EXISTS burgers;
+USE `georisk`;
 
-# Create the burgers table
-CREATE TABLE burgers (
-id int NOT NULL AUTO_INCREMENT,
-burger_name varchar(255) NOT NULL,
-devoured BOOL DEFAULT false,
-PRIMARY KEY (id)
+CREATE TABLE userpref (
+	`id` INT AUTO_INCREMENT NOT NULL,
+	`city_name` VARCHAR(100) NOT NULL,
+	`rating` BOOLEAN DEFAULT 0,
+	`review` VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id)
 );
