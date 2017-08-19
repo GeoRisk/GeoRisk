@@ -3,7 +3,7 @@ module.exports = function(sequelize, dataTypes) {
 		id: dataTypes.INT,
 		city_name: dataTypes.STRING,
 		rating: dataTypes.BOOLEAN,
-		review: dataTypes.TEXT
+		review: dataTypes.TEXT,
 		//Need to convert date into proper form.
 		date: dataTypes.INT
 	});
