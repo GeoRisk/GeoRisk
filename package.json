@@ -1,5 +1,5 @@
 {
-  "name": "node_what_todo",
+  "name": "georisk",
   "version": "1.0.0",
   "description": "-Node \r -Express \r -MySQL \r -Handlebars \r -Jquery",
   "main": "server.js",
@@ -13,7 +13,9 @@
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
     "method-override": "^2.3.5",
-    "mysql": "^2.10.2"
+    "mysql": "^2.10.2",
+    "mysql2": "^1.4.1",
+    "sequelize": "^4.5.0"
   },
   "devDependencies": {
     "handlebars-helper-css": "^0.1.0"
