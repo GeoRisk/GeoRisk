@@ -25,7 +25,15 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-require("./routes/api-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync().then(function() {
+	app.listen(port, function(){
+		console.log("Listening in port: " + port);
+	});
+});
 
 
 // // parse application/x-www-form-urlencoded
@@ -50,10 +58,4 @@ require("./routes/api-routes.js")(app);
 
 // app.listen(port);
 
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
-db.sequelize.sync().then(function() {
-	app.listen(PORT, function(){
-		console.log("Listening in port: " + port);
-	});
-});
+

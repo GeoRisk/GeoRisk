@@ -1,11 +1,14 @@
 module.exports = function(sequelize, dataTypes) {
 	var User = sequelize.define("User", {
-		id: dataTypes.INT,
+		id: {
+			type: dataTypes.INTEGER,
+			primaryKey: true,
+		},
 		city_name: dataTypes.STRING,
 		rating: dataTypes.BOOLEAN,
 		review: dataTypes.TEXT,
 		//Need to convert date into proper form.
-		date: dataTypes.INT
+		date: dataTypes.INTEGER
 	});
 	return User;
 }
