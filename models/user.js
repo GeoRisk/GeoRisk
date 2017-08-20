@@ -4,11 +4,10 @@ module.exports = function(sequelize, dataTypes) {
 			type: dataTypes.INTEGER,
 			primaryKey: true,
 		},
-		city_name: dataTypes.STRING,
-		rating: dataTypes.BOOLEAN,
-		review: dataTypes.TEXT,
-		//Need to convert date into proper form.
-		date: dataTypes.INTEGER
+		first_name: dataTypes.STRING,
+		last_name: dataTypes.STRING,
+		email: dataTypes.STRING,
+		password: dataTypes.STRING
 	});
 	return User;
 }
