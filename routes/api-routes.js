@@ -1,9 +1,12 @@
+
+
 // var weatherKey = require ('./keys.js');
 
 // var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 // //userCity is currently dummy data. Need to feed user input here.
 // var userCity = "London";
 // var userSearchURL = weatherURL + userCity + weatherKey;
+// console.log(userSearchURL);
 
 // $.ajax({
 // 	url: userSearchURL,
@@ -46,6 +49,7 @@ module.exports = function(app){
 			}
 		}).then(function(dbUserPref){
 			res.json(dbUserPref);
+
 		});
 	});
 
