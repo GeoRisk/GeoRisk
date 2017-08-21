@@ -10,3 +10,9 @@ CREATE TABLE userpref (
 	`review` VARCHAR(255) NOT NULL,
 	PRIMARY KEY (id)
 );
+
+-- Left Join to match user preferences to user by ID
+SELECT usercred.first_name, userpref.id
+FROM usercred
+LEFT JOIN userpref ON usercred.id = userpref.id
+ORDER BY usercred.first_name;
