@@ -1,6 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-// var methodOverride = require("method-override");
+var methodOverride = require("method-override");
 
 
 // Sets up the Express App
@@ -8,30 +8,39 @@ var bodyParser = require("body-parser");
 var app = express();
 
 // listen on port 3000
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
+
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
 
 //By default will use target index.js
 var db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+app.use(methodOverride("_method"));
 
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+// Set Handlebars
+var exphbs = require("express-handlebars");
+app.engine('handlebars',
+    exphbs({defaultLayout: 'main'}));
+
+app.set('view engine', 'handlebars');
 
 // Routes
 // =============================================================
-require("./routes/api-routes.js")(app);
+var routes = require("./routes/api-routes.js");//(app);
+app.use("/", routes);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync().then(function() {
-	app.listen(port, function(){
-		console.log("Listening in port: " + port);
+	app.listen(PORT, function(){
+		console.log("App Listening On Port: " + PORT);
 	});
 });
 

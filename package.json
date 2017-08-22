@@ -16,7 +16,9 @@
     "method-override": "^2.3.9",
     "mysql": "^2.10.2",
     "mysql2": "^1.4.1",
-    "sequelize": "^4.5.0"
+    "sequelize": "^4.5.0",
+    "gulp": "latest",
+    "browser-sync": "latest"
   },
   "devDependencies": {
     "browserify": "^14.4.0",
