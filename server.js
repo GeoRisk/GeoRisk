@@ -5,7 +5,7 @@ var session = require("express-session");
 // var methodOverride = require("method-override");
 
 // Requiring passport as we've configured it
-var passport = require(".config/passport");
+var passport = require("./config/passport");
 
 
 // Sets up the Express App
