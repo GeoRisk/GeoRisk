@@ -1,6 +1,11 @@
+// Requiring necessary npm packages
 var express = require("express");
 var bodyParser = require("body-parser");
+var session = require("express-session");
 // var methodOverride = require("method-override");
+
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
 
 
 // Sets up the Express App
@@ -23,9 +28,18 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
+// We need to use sessions to keep track of user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Routes
 // =============================================================
 require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes-auth.js")(app);
+require("./routes/html-routes-auth.js")(app);
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
