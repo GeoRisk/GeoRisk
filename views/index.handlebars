@@ -1,46 +1,125 @@
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12 text-center" id="top-bar">
-			<img src="/assets/images/burger.png" alt="burger" />
-			<h1> Eat-Da-Burger! </h1>
-		</div>
-		<div class="col-xs-6 text-center" class="task">
-			<div class="row">
-			  {{#each burgers}}
-			  	{{#unless this.devoured}}
-				<div class="col-xs-9 text-center">
-					<pre>{{this.id}}. {{this.burger_name}}
-					</pre>
-				  		<!-- {{this.Date}} -->
-				</div>
-				<div class="col-xs-3 text-center">
-					<form method="POST" action="/burgers/update?_method=PUT" class="button-size">
-						<input input type="hidden" type="text" name="burger_id" value={{this.id}}><br>
-						<button type="submit" class="btn btn-default">Devour it!</button>
-					</form>
-				</div>
-				{{/unless}}
-			  {{/each}}
-			</div>
-		</div>
-		<div class="col-xs-6 text-center" class="task">
-			  {{#each burgers}}
-			  	{{#if this.devoured}}
-			  		<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
-				{{/if}}
-			  {{/each}}
-		</div>
-	</div>
+<div>{{#if first_name}}
+    <h1>Hello, {{first_name}}</h1>
+{{else}}
+    <h1>Hello, User !</h1>
+{{/if}}
+</div>
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+
+
+<div class="hero">
+    <!--<div class="container">-->
+    <!-- Research Location -->
+    <form action="/" class="find-location">
+        <input type="text" placeholder="Find your location...">
+        <input type="submit" value="Find">
+    </form>
+</div>
+<!--</div>-->
+
+
+<div id="map-canvas">X</div>
+<!-- Use an element to toggle between a like/dislike icon -->
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+<!-- Bar Research  -->
+<div id="floating-panel">
+    <input id="address" type="textbox" value="Sydney, NSW">
+    <input id="submit" type="button" value="Geocode">
 </div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12 text-center enter_section">
-			<form action="/burgers/create" method="POST">
-				<input type="text" class="form-control" name="burger_name" value="" id="enter_text">
-				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
-			</form>
-			<p>Enter a burger you want to eat Click the "Submit" button.</p>
-		</div>
-	</div>
+
+<!--
+<div class="row col-md-4">
+    <h2>City Name</h2>
+    <form>
+        <fieldset>
+            <label>Latitude</label>
+            <input name="lat" type="text" value="">
+
+            <label>Longitude</label>
+            <input name="lng" type="text" value="">
+
+            <label>Formatted Address</label>
+            <input name="formatted_address" type="text" value="">
+        </fieldset>
+
+        <input id="geocomplete" type="text" placeholder="Type in an address" value="111 Broadway, New York, NY" />
+        <button onclick="getLocation()" id="find" type="button" value="find">Find!</button>
+
+        <a id="reset" href="#" style="display:none;">Reset Marker</a>
+    </form>
 </div>
+</div>
+-->
+<hr>
+{{!if showResult}} <!-- create var showResult-->
+<div class="row">
+    <div class="col-md-6">
+        <h3 >Description City</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+    </div>
+
+    <div class="col-md-6">
+        <h3>You Can Expect...</h3>
+        {{!each.data}} <!-- create data-->
+        <ul>
+            <li>Lorem Ipsum</li>
+            <li>Dolor Sit Amet</li>
+            <li>Consectetur</li>
+            <li>Adipiscing Elit</li>
+        </ul>
+    </div>
+</div>
+
+
+<hr>
+<h3 class="my-4">Favorites</h3>
+<hr>
+<!--<div class="carousel-item">-->
+<div class="col-md-4 col-sm-4 mb-4" id="imgCarousel">
+    <a href="#">
+        <img class="img-fluid" src="http://placehold.it/300x200" alt="">
+    </a>
+</div>
+
+<div class="col-md-4 col-sm-4 mb-4">
+    <a href="#">
+        <img class="img-fluid" src="http://placehold.it/300x200" alt="">
+    </a>
+</div>
+
+<div class="col-md-4 col-sm-4 mb-4">
+    <a href="#">
+        <img class="img-fluid" src="http://placehold.it/300x200" alt="">
+    </a>
+</div>
+<!--</div>-->
+<br>
+<!--
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#imgCarousel').slick({
+            setting-name: setting-value
+    })
+    });
+</script>
+
+<script>
+$('.add-remove').slick({
+slidesToShow: 3,
+slidesToScroll: 3
+});
+$('.js-add-slide').on('click', function() {
+slideIndex++;
+$('.add-remove').slick('slickAdd','<div><h3>' + slideIndex + '</h3></div>');
+});
+
+$('.js-remove-slide').on('click', function() {
+$('.add-remove').slick('slickRemove',slideIndex - 1);
+if (slideIndex !== 0){
+slideIndex--;
+}
+});
+</script>-->

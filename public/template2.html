@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:g="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src=https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css></script>
+
+    <style type="text/css" media="screen">
+        form { width: 300px; float: left; margin-left: 20px}
+
+        fieldset { width: 320px; margin-top: 20px}
+        fieldset strong { display: block; margin: 0.5em 0 0em; }
+        fieldset input { width: 95%; }
+
+        ul span { color: #999; }
+
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #floating-panel {
+            position: absolute;
+            top: 10px;
+            left: 25%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Roboto','sans-serif';
+            line-height: 30px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="pull-left" href="#">OUUUU<img src=""></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <!--<li><a href="#">File Upload</a></li>-->
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+<div class="row">
+
+    <div class="col-md-8">
+        <h1>Hello User !</h1>
+        <div id="floating-panel">
+            <input id="address" type="textbox" value="Sydney, NSW">
+            <input id="submit" type="button" value="Geocode">
+        </div>
+        <div id="map" style="width:100%;height:400px"></div>
+    </div>
+
+    <div class="row col-md-4">
+        <h3>City Name</h3>
+
+        <form>
+
+            <fieldset>
+                <label>Latitude</label>
+                <input name="lat" type="text" value="">
+
+                <label>Longitude</label>
+                <input name="lng" type="text" value="">
+
+                <label>Formatted Address</label>
+                <input name="formatted_address" type="text" value="">
+            </fieldset>
+
+            <input id="geocomplete" type="text" placeholder="Type in an address" value="111 Broadway, New York, NY" />
+            <button onclick="getLocation()" id="find" type="button" value="find">Find!</button>
+
+            <a id="reset" href="#" style="display:none;">Reset Marker</a>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3 >Project Description</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+
+        <h3>Project Details</h3>
+        <ul>
+            <li>Lorem Ipsum</li>
+            <li>Dolor Sit Amet</li>
+            <li>Consectetur</li>
+            <li>Adipiscing Elit</li>
+        </ul>
+    </div>
+</div>
+<!--Related Projects Row-->
+<h3 class="my-4">Favorites</h3>
+
+    <div class="col-md-4 col-sm-4 mb-4">
+        <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+    </div>
+
+    <div class="col-md-4 col-sm-4 mb-4">
+        <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+    </div>
+
+    <div class="col-md-4 col-sm-4 mb-4">
+        <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+    </div>
+<!--</div>-->
+<!--.row-->
+
+<!--</div>-->
+<!--container-->
+
+<!--Vertical NavBar Social Media-->
+<div class="addthis_toolbox addthis_floating_style addthis_counter_style" style="left:50px;top:50px;">
+    <a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
+    <a class="addthis_button_tweet" tw:count="vertical"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
+    <a class="addthis_counter"></a>
+</div>
+
+<!--Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; GeoRisk 2017</p>
+    </div>
+    <!--container-->
+</footer>
+
+<!--<script>
+//    function myMap() {
+//        //var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+//        var mapCanvas = document.getElementById("map");
+//        //var mapOptions = {center: myCenter, zoom: 5};
+//        var map = new google.maps.Map(mapCanvas, mapOptions);
+//        var marker = new google.maps.Marker({animation:google.maps.Animation.BOUNCE});//position:myCenter,
+//        marker.setMap(map);
+
+//        function myMap() {
+//            var mapProp= {
+//                center:new google.maps.LatLng(51.508742,-0.120850),
+//                zoom:5
+//            };
+//            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+//        }
+
+        // Zoom to 9 when clicking on marker
+//        google.maps.event.addListener(marker,'click',function() {
+//            map.setZoom(9);
+//            map.setCenter(marker.getPosition());
+//        });
+//    }
+//
+//    $('.autoplay').slick({
+//        slidesToShow: 3,
+//        slidesToScroll: 1,
+//        autoplay: true,
+//        autoplaySpeed: 2000
+//    });
+</script>-->
+
+
+
+
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: {lat: -34.397, lng: 150.644}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() {
+            geocodeAddress(geocoder, map);
+        });
+    }
+
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+            if (status === 'OK') {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATb3U96szyekYjuutP2-iCxy4aVTgKH7M&callback=initMap"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.min.js"></script>
+</body>
+</html>

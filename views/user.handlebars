@@ -1,0 +1,19 @@
+<h1>Customer Info</h1>
+<h2><a href="mailto:{{email}}">{{name}} &lt;{{email}}&gt;</a></h2>
+
+<h3>Address:</h3>
+{{{fullAddress}}}
+
+<h3>Phone:</h3>
+{{phone}}
+
+<h3>Rsearch(es):</h3>
+<ul>
+    {{#each research}}
+        <li><a href="{{url}}">{{researchNumber}}: {{date}} &mdash; {{status}}</a></li>
+    {{/each}}
+</ul>
+
+
+<h1>User Preferences</h1>
+<h2>{{name}}</h2>
