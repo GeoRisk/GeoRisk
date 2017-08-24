@@ -21,20 +21,20 @@ var sequelize = new Sequelize("georisk", "root", "password") {
 
 }
 
-// var connection = mysql.createConnection({		
-//   host: "127.0.0.1",		
-//   user: "root",		
-//   password: "",		
-//   database: "georisk"		
-// });		
+// var connection = mysql.createConnection({
+//   host: "127.0.0.1",
+//   user: "root",
+//   password: "",
+//   database: "georisk"
+// });
 
 
-// connection.connect(function(err) {		
-//   if (err) {		
-//     console.error("error connecting: " + err.stack);		
-//     return;		
-//   }		
-//   console.log("connected as id " + connection.threadId);		
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error("error connecting: " + err.stack);
+//     return;
+//   }
+//   console.log("connected as id " + connection.threadId);
 // });
 
 module.exports = sequelize;
