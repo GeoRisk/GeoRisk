@@ -3,7 +3,7 @@
 var mysql = require("mysql");
 var Sequelize = require("sequelize");
 
-var sequelize = new Sequelize("georisk", "root", "password"){
+var sequelize = new Sequelize("georisk", "root", "password") {
 	host: "127.0.0.1",
 	user: "root",
 	password: "",
