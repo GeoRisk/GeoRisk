@@ -1,0 +1,90 @@
+form {
+    width: 300px;
+    float: left;
+    margin-left: 20px
+}
+
+fieldset { width: 320px;
+    margin-top: 20px
+}
+
+fieldset strong {
+    display: block;
+    margin: 0.5em 0 0em;
+}
+
+fieldset input {
+    width: 95%;
+}
+
+ul span { color: #999; }
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map-canvas{
+    height: 50%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    color: red;
+    margin: 0;
+    padding: 0;
+    background-image: url("http://wallpapercave.com/wp/eEFPxHS.jpg");
+}
+
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    /*padding: 5px;*/
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    /*padding-left: 10px;*/
+    padding: 5px 5px 5px 10px;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/*
+Round Buttons
+Tip: Add border-radius:50% to create round buttons, and reduce the width:
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}*/
