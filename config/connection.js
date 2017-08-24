@@ -18,6 +18,6 @@ var sequelize = new Sequelize("georisk", "root", "password") {
 	    min: 0,
 	    idle: 10000
 	}
-	
+
 }
 module.exports = sequelize;
