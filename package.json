@@ -11,10 +11,13 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
+    "browser-sync": "latest",
     "express": "^4.15.4",
     "express-handlebars": "^2.0.1",
     "express-session": "^1.15.5",
     "google-images": "^2.1.0",
+    "express3-handlebars": "^0.5.2",
+    "gulp": "latest",
     "method-override": "^2.3.9",
     "mysql": "^2.14.1",
     "mysql2": "^1.4.1",

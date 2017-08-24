@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>GeoRisk</title>
 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+        <!--<meta name="description" content="">-->
+        <!--<meta name="author" content="">-->
+
+        <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--Boostrap JS-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- Custom styles CSS for this template -->
+        <link rel="stylesheet" type="text/css" href="/public/assets/css/style.css">
+
+        <!--Slick Carousel-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+
+        <!-- Add FB/ Twitter icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Add Toggle icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+
+	<body>
+    <!-- References a Handlebars partial in views/partials/bsnavbar.handlebars -->
+    {{!>bsnavbar}}
+
+    {{!> header}}
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="pull-left" href="#"><img src="http://placehold.it/50x50"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <!--<li><a href="/file-upload">File Upload</a></li>-->
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+
+    <!-- The HTML for each view goes here -->
+    <div class="container">
+
+        {{{body}}}
+
+        <hr>
+
+        {{!>footer}}
+        <!--Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; GeoRisk 2017</p>
+            </div>
+        </footer>
+
+    </div> <!-- /container -->
+
+
+
+
+
+        <!--Google Key API-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATb3U96szyekYjuutP2-iCxy4aVTgKH7M&callback=initMap" type="text/javascript"></script>
+
+        <!--Slick Carousel-->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+        <!--<script type="text/javascript" src="/slick/slick.min.js"></script>-->
+
+        <!-- Link JS File-->
+        <script src="/views/js/app.js"></script>
+
+	</body>
+</html>
