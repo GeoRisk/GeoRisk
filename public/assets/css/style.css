@@ -25,6 +25,11 @@ ul span { color: #999; }
     height: 50%;
 }
 
+form.signup,
+form.login {
+    margin-top: 50px;
+}
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
     height: 100%;
@@ -88,3 +93,73 @@ Tip: Add border-radius:50% to create round buttons, and reduce the width:
   text-decoration: none;
   border-radius: 50%;
 }*/
+
+/*!
+ * Start Bootstrap - Portfolio Item (http://startbootstrap.com/template-overviews/portfolio-item)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-portfolio-item/blob/master/LICENSE)
+ */
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+form {
+    width: 300px;
+    float: left;
+    margin-left: 20px
+}
+
+fieldset {
+    width: 320px;
+    margin-top: 20px
+}
+
+fieldset strong {
+    display: block;
+    margin: 0.5em 0 0em;
+}
+
+fieldset input {
+    width: 95%;
+}
+
+ul span {
+    color: #999;
+}
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    background-image: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/08/Big-Earthquake-HD-Wallpapers.jpg");
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+
