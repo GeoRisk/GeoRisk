@@ -21,7 +21,7 @@
     "mysql2": "^1.4.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "sequelize": "^4.6.0",
+    "sequelize": "^5.15.1",
     "bootstrap": "^4.0.0-beta",
     "jquery": "^3.2.1",
     "popper.js": "^1.11.1"
